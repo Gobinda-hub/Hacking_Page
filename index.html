@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacking_Page</title>
+</head>
+<style>
+    body{
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgb(227, 219, 219);
+        text-shadow: 3px 3px 3px red;
+        font-size: 13vh;
+        text-transform: capitalize;
+    }
+    @keyframes bg{
+        0%{background-image: url(images/hack1.jpg);}
+        25%{background-image: url(images/hack2.jpg);}
+        50%{background-image: url(images/hack3.jpg);}
+        100%{background-image: url(images/hack4.jpg);}
+    }
+    audio{
+        display: none;
+    }
+    
+</style>
+<body>    
+    <h3 id="data1"></h3>         
+</body>
+
+<script>
+    let bd = document.querySelector("body");
+    let data1 = document.querySelector("#data1");
+    function stm(){
+        return new Promise((resolve, reject) => {
+            setTimeout(()=> {
+                resolve(200);                
+            },4000)            
+        })
+    }
+    (async function(){
+        await stm(bd.style.animation = "bg 10s linear 2.8");
+        await stm(data1.innerText = "Hacking Started.......");
+        await stm(data1.innerText = "Firewall breached successfully");
+        await stm(data1.innerText = "All Files are copying.........");
+        await stm(data1.innerText = "All data copied successfully!");
+        await stm(data1.innerText = "System Crashed");
+        await stm(data1.innerText = ""); 
+        await stm(bd.style.backgroundColor = "black");
+    })();
+</script>
+</html>
